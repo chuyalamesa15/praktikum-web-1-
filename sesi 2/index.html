@@ -8,12 +8,63 @@
         * {
             color: blue;
         }
+
+        h1 {
+            color: antiquewhite;
+        }
+
+        .teks-merah,
+        #teks-kuning {
+        font-size: 20px;
+        text-allign: center;
+        bcakground-color: black;
+        color: red;
+        }
+
+        .teks-merah{
+            color: red;
+        }
+
+        #teks-kuning {
+            color: yellow;
+        }
+        div p {
+            color: blue;
+        }
+
+        div > div > p{
+            font-weight: bold;
+        } 
+
+        .subbagian {
+            color: blueviolet;
+        }
+        .subbagian.header {
+            color: brown;
+        }
+
+        .subbagian#teks {
+            color: brown;
+        }
     </style>
 </head>
 <body>
     <h1>Pemrograman web 1</h1>
-    <p>Praktik Pemrograman web 1 sesi 2 akan membahas tentang penggunaan css.</p>
-    <p>CSS atau Cascading Sytle Sheets adalah sebuah bahasa yang digunakan untuk mengatur tampilan suatu halaman web</p>
+    <p class="teks-merah">Praktik Pemrograman Web 1 sesi 2 akan Membahas tentang penggunaan CSS.</p>
+    <p id="teks-kuning">CSS atau Cascading Sytle Sheets adalah sebuah bahasa yang digunakan untuk mengatur tampilan suatu halaman web</p>
+
+
+    <div>
+    <p>ini adalah Paragraf pertama.</p>
+</div>
+<div>
+    <p>ini adalah paragraf kedua.</p>
+</div>
+
+<div>
+    <div class="subbagian header">Bagian header</div>
+    <p class="subbagian" id="teks">Ini adalah bagian paragraf</p>
+</div>
 
 </body>
 </html>
