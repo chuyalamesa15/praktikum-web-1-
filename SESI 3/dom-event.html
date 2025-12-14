@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 3.3 - DOM Event</title>
+</head>
+<body>
+
+    <h2 id="uji_heading"
+        onmouseover="sorot()"
+        onmouseout="kelarSorot()">Arahkan ke sini</h2>
+
+    <h2 id="uji_klik"
+        onmousedown="tahan()"
+        onmouseup="lepas()">Klik dong!</h2>
+
+    <hr>
+
+    <label for="nama">Masukkan Nama:</label>
+    <input type="text" id="nama" onkeyup="tiru()">
+
+    <button onclick="klik()">Klik</button>
+    <button onclick="ulangi()">Ulangi</button>
+
+    <span id="hasil"></span>
+
+    <script>
+        // Event hover
+        function sorot() {
+            document.getElementById("uji_heading").innerHTML = "Sudah disorot";
+        }
+
+        function kelarSorot() {
+            document.getElementById("uji_heading").innerHTML = "Arahkan ke sini";
+        }
+
+        // Event mousedown & mouseup
+        function tahan() {
+            document.getElementById("uji_klik").innerHTML = "Lepasin...";
+        }
+
+        function lepas() {
+            document.getElementById("uji_klik").innerHTML = "Klik dong!";
+        }
+
+        // Button klik()
+        function klik() {
+            let v = document.getElementById("nama").value;
+            let h = document.getElementById("hasil");
+
+            if (v === "") {
+                h.innerHTML = "<br>Inputan kosong";
+                h.style.color = "red";
+            } else {
+                h.innerHTML = "<br>" + v;
+                h.style.color = "blue";
+            }
+        }
+
+        // Button ulangi()
+        function ulangi() {
+            document.getElementById("nama").value = "";
+            document.getElementById("hasil").innerHTML = "";
+        }
+
+        // Event onkeyup
+        function tiru() {
+            let v = document.getElementById("nama").value;
+            document.getElementById("hasil").innerHTML = "<br>" + v;
+            document.getElementById("hasil").style.color = "black";
+        }
+    </script>
+
+</body>
+</html>
