@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 3.1 - Form HTML</title>
+</head>
+<body>
+
+    <h2>Form Input</h2>
+
+    <form action="">
+        <!-- Input Text -->
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan nama" required>
+        <br><br>
+
+        <!-- Input Password -->
+        <label for="pw">Password:</label>
+        <input type="password" id="pw" name="pw" required>
+        <br><br>
+
+        <!-- Input Date -->
+        <label for="tgl">Tanggal Lahir:</label>
+        <input type="date" id="tgl" name="tgl" min="2022-01-11" required>
+        <br><br>
+
+        <!-- Input Number -->
+        <label for="gaji">Gaji:</label>
+        <input type="number" id="gaji" name="gaji" min="1000000" step="50000" placeholder="Minimal 1.000.000" required>
+        <br><br>
+
+        <!-- Input Radio -->
+        <label>Status:</label>
+        <input type="radio" id="lajang" name="status" value="Lajang">
+        <label for="lajang">Lajang</label>
+
+        <input type="radio" id="menikah" name="status" value="Menikah">
+        <label for="menikah">Menikah</label>
+        <br><br>
+
+        <!-- Tombol -->
+        <input type="submit" value="Kirim">
+        <input type="reset" value="Reset">
+    </form>
+
+</body>
+</html>
