@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percobaan 3.2 - DOM</title>
+</head>
+<body>
+
+    <h1 id="judul"></h1>
+    <p id="isi"></p>
+
+    <input type="text" id="inputan" value="Input">
+
+    <script>
+        // Mengisi content menggunakan DOM
+        let j = document.getElementById("judul");
+        j.innerHTML = "Belajar DOM JavaScript";
+
+        let p = document.getElementById("isi");
+        p.innerHTML = "Kalimat ini ditulis melalui DOM JavaScript.";
+    </script>
+
+</body>
+</html>
